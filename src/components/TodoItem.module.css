@@ -3,4 +3,38 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #f7f5ef;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.item:hover{
+  font-size: 1.5rem;
+  transition: 0.5s;
+  box-shadow: 6px 3px #AE2323;
+  background-color: pink
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .item {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .item {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .item {
+    width: 30%;
+  }
 }

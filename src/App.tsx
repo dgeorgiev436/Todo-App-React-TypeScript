@@ -6,10 +6,12 @@ import TodosContextProvider from "./store/todos-context"
 function App() {
 
   return (
-    <TodosContextProvider>
-		<NewTodo/>
-		<Todos/>
-    </TodosContextProvider>
+    <div className="container">
+      <TodosContextProvider>
+      <NewTodo/>
+      <Todos/>
+      </TodosContextProvider>
+    </div>
   );
 }
 

@@ -7,13 +7,15 @@ type TodosContextObject = {
 	items: Todo[];
 	addTodo: (text: string) => void;
 	removeTodo: (id: string) => void;
+	removeAll: () => void
 }
 
 
 export const TodosContext = React.createContext<TodosContextObject>({
 	items: [],
 	addTodo: () => {},
-	removeTodo: (id: string) => {}
+	removeTodo: (id: string) => {},
+	removeAll: () => {}
 })
 
 
@@ -30,6 +32,10 @@ const TodosContextProvider: React.FC = (props) => {
 			return prevTodos.concat(newTodo)
 		})
 	}
+
+	const removeAllHandler = () => {
+		setTodos([]);
+	}
 	
 	const removeTodoHandler = (id: string) => {
 		
@@ -41,7 +47,8 @@ const TodosContextProvider: React.FC = (props) => {
 	const contextValue: TodosContextObject = {
 		items: todos,
 		addTodo: addTodoHandler,
-		removeTodo: removeTodoHandler
+		removeTodo: removeTodoHandler,
+		removeAll: removeAllHandler
 	}
 	
 	

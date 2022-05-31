@@ -38,3 +38,9 @@
     width: 30%;
   }
 }
+
+@media only screen and (max-width: 481px) {
+  .item {
+    width: 20%;
+  }
+}

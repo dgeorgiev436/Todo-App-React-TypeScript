@@ -35,12 +35,12 @@
 
 @media only screen and (max-width: 576px) {
   .item {
-    width: 30%;
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 481px) {
   .item {
-    width: 20%;
+    width: 40%;
   }
 }
